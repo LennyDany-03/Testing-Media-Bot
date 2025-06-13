@@ -89,18 +89,16 @@ python RAG.py
 
 ## 📁 Project Structure
 
-\`\`\`
-stock-market-rag/
-│
-├── Economy.py           # Economic Times scraper
-├── MoneyControl.py      # MoneyControl scraper
-├── NY-times.py          # NY Times scraper
-├── combain.py           # Data cleaning and merging
-├── RAG.py               # RAG implementation and chatbot interface
-├── requirements.txt     # Project dependencies
-├── combined_market_news.csv  # Final cleaned dataset
-└── venv/               # Virtual environment
-\`\`\`
+Directory structure:
+└── lennydany-03-testing-media-bot/
+    ├── README.md
+    ├── combain.py
+    ├── Economy.py
+    ├── MoneyControl.py
+    ├── NY-times.py
+    ├── RAG.py
+    └── requirements.txt
+
 
 ## ⚙️ Installation
 
