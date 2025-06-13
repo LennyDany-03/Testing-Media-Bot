@@ -1,15 +1,10 @@
 # 📊 Stock Market RAG Bot
 
+A Retrieval-Augmented Generation (RAG) bot that scrapes financial news from multiple sources, processes it, and enables intelligent querying on the combined dataset.
+
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-A sophisticated Retrieval-Augmented Generation (RAG) system that aggregates financial market news from multiple authoritative sources, processes the data, and enables intelligent natural language queries on the combined dataset.
-
-<p align="center">
-  <img src="/placeholder.svg?height=300&width=600" alt="Stock Market RAG Bot Architecture" />
-</p>
 
 ## 🌟 Overview
 
@@ -21,24 +16,69 @@ This project creates an intelligent financial news assistant by:
 4. **Retrieving** relevant context based on user queries
 5. **Generating** accurate, contextual responses using LLMs
 
-## 🚀 Features
+## 🚀 Quick Start
 
-- ✅ **Multi-source News Aggregation**
-  - Economic Times (`Economy.py`)
-  - MoneyControl (`MoneyControl.py`)
-  - NY Times (`NY-times.py`)
-- ✅ **Intelligent Data Processing**
-  - Deduplication and noise removal
-  - Metadata enrichment
-  - Semantic merging of related news
-- ✅ **Advanced RAG Pipeline**
-  - Vector embedding with ChromaDB
-  - Semantic search capabilities
-  - Context-aware response generation
-- ✅ **User-friendly Interface**
-  - Natural language query processing
-  - Citation of sources in responses
-  - Confidence scoring for answers
+### Prerequisites
+- Python 3.8+
+- Chrome browser
+- OpenAI API key
+
+### Installation
+
+\`\`\`bash
+# Clone repository
+git clone https://github.com/LennyDany-03/stock-market-rag.git
+cd stock-market-rag
+
+# Set up virtual environment
+python -m venv venv
+venv\Scripts\activate  # On Windows
+# OR
+source venv/bin/activate  # On macOS/Linux
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set your OpenAI API key
+# Create a .env file with: OPENAI_API_KEY=your_key_here
+\`\`\`
+
+## 📊 How to Use
+
+### 1. Collect Data
+Run each scraper to gather the latest financial news:
+
+\`\`\`bash
+python scrapers/Economy.py
+python scrapers/MoneyControl.py
+python scrapers/NY-times.py
+\`\`\`
+
+### 2. Process Data
+Combine and clean the collected data:
+
+\`\`\`bash
+python processing/combain.py
+\`\`\`
+
+### 3. Query the Data
+Launch the RAG chatbot interface:
+
+\`\`\`bash
+python rag/RAG.py
+\`\`\`
+
+### Example Interaction
+
+\`\`\`
+❓ Ask a stock market question: What are the latest tech stock trends?
+
+🤖 Based on recent news, tech stocks have shown mixed performance.
+   Apple shares rose 2.3% following their AI announcement.
+   Nvidia gained 1.7% as demand for AI chips remains strong.
+   However, smaller tech companies are facing pressure due to
+   rising interest rates.
+\`\`\`
 
 ## 🧠 Technology Stack
 
