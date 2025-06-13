@@ -1,69 +1,63 @@
-# 🚀 How to Use: Stock Market RAG Bot
+# 🚀 How to Use: Stock Market RAG Bot (Windows)
 
-Follow these instructions to run the project from scratch.
+This guide shows how to run the project using **PowerShell** or **CMD** on Windows.
 
 ---
 
-## 1️⃣ Clone the Repository
+## 🛠️ Step 1: Clone the Repository
 
-```bash
-git clone https://github.com/your-username/Testing-Media-Bot.git
+### PowerShell or CMD
+
+```powershell
+git clone https://github.com/your-username/stock-market-rag-bot.git
 cd Testing-Media-Bot
-2️⃣ Set Up a Virtual Environment (Windows)
-bash
-Copy
-Edit
+ ```
+
+🧪 Step 2: Create and Activate Virtual Environment
+
+PowerShell
 python -m venv venv
-venv\Scripts\activate
-If you're using macOS/Linux:
+.\venv\Scripts\activate
 
-bash
-Copy
-Edit
-python3 -m venv venv
-source venv/bin/activate
-3️⃣ Install Project Dependencies
-bash
-Copy
-Edit
+CMD
+
+python -m venv venv
+venv\Scripts\activate.bat
+
+📦 Step 3: Install Required Libraries
+
+PowerShell or CMD (after activating the virtual environment)
+
 pip install -r requirements.txt
-4️⃣ Run the News Scrapers
-These scripts will create individual .csv files from financial websites:
 
-bash
-Copy
-Edit
-python Economy.py         # Exports: market_news.csv
-python MoneyControl.py    # Exports: moneycontrol_market_news.csv
-python NY-times.py        # Exports: nytimes_economy_news.csv
-5️⃣ Combine and Clean the Data
-This script merges the CSVs into one clean dataset:
+📥 Step 4: Run the News Scraper Scripts
 
-bash
-Copy
-Edit
-python combain.py         # Output: combined_market_news.csv
-6️⃣ Launch the RAG Chatbot
-This script initializes the Retrieval-Augmented Generation (RAG) bot. You can now ask questions based on the scraped news:
+These scripts extract financial news and save it as CSV files.
 
-bash
-Copy
-Edit
+python Economy.py          # → market_news.csv
+python MoneyControl.py     # → moneycontrol_market_news.csv
+python NY-times.py         # → nytimes_economy_news.csv
+
+🧹 Step 5: Combine and Clean All News Data
+
+python combain.py          # → combined_market_news.csv
+
+💬 Step 6: Start the RAG Chatbot
+
 python RAG.py
-Example Usage:
 
-vbnet
-Copy
-Edit
-❓ Ask a stock market question (type 'exit' to quit): what are the top stocks to watch today?
-💬 Based on the news, ICICI Bank and HCL Technologies are among the top picks...
-✅ You're Ready!
-You're now running a local AI-powered stock news bot based on real financial articles.
-Happy querying!
+You'll see:
 
-vbnet
-Copy
-Edit
+💡 Stock Market RAG Bot Initialized! Ask questions based on the news dataset.
 
-Let me know if you'd like this styled for terminal printing or turned into a `help()` screen inside the Python CLI too!
+❓ Ask a stock market question (type 'exit' to quit): which stocks are good today?
 
+💬 Based on the news, ICICI Bank and HCL Tech are potential buys...
+
+🛑 To Exit the Bot
+Just type: exit
+
+🧑‍💻 Developed & Maintained by
+Lenny Dany Derek D
+🔗 GitHub: LennyDany-03
+📂 Repo: Testing-Media-Bot
