@@ -9,7 +9,7 @@ This guide shows how to run the project using **PowerShell** or **CMD** on Windo
 ### PowerShell or CMD
 
 ```powershell
-git clone https://github.com/your-username/stock-market-rag-bot.git
+git clone https://github.com/your-username/Testing-Media-Bot.git
 cd Testing-Media-Bot
  ```
 
