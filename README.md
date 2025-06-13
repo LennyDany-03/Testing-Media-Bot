@@ -23,16 +23,18 @@ This project creates an intelligent financial news assistant by:
 
 ### Installation
 
-\`\`\`bash
-# Clone repository
+\`\`\`cmd
+# Clone repository (using Git Bash or Git for Windows)
 git clone https://github.com/LennyDany-03/stock-market-rag.git
 cd stock-market-rag
 
-# Set up virtual environment
+# Set up virtual environment (CMD)
 python -m venv venv
-venv\Scripts\activate  # On Windows
-# OR
-source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate
+
+# Alternative for PowerShell
+# python -m venv venv
+# .\venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install -r requirements.txt
@@ -43,7 +45,7 @@ pip install -r requirements.txt
 ### 1. Collect Data
 Run each scraper to gather the latest financial news:
 
-\`\`\`bash
+\`\`\`cmd
 python Economy.py
 python MoneyControl.py
 python NY-times.py
@@ -52,14 +54,14 @@ python NY-times.py
 ### 2. Process Data
 Combine and clean the collected data:
 
-\`\`\`bash
+\`\`\`cmd
 python combain.py
 \`\`\`
 
 ### 3. Query the Data
 Launch the RAG chatbot interface:
 
-\`\`\`bash
+\`\`\`cmd
 python RAG.py
 \`\`\`
 
@@ -111,26 +113,28 @@ stock-market-rag/
 
 1. **Clone the repository**
 
-\`\`\`bash
+\`\`\`cmd
 git clone https://github.com/LennyDany-03/stock-market-rag.git
 cd stock-market-rag
 \`\`\`
 
 2. **Create and activate a virtual environment**
 
-\`\`\`bash
-# On Windows
+\`\`\`cmd
+# Using CMD
 python -m venv venv
 venv\Scripts\activate
 
-# On macOS/Linux
-python -m venv venv
-source venv/bin/activate
+# Using PowerShell
+# If you get execution policy errors, you may need to run:
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# python -m venv venv
+# .\venv\Scripts\Activate.ps1
 \`\`\`
 
 3. **Install dependencies**
 
-\`\`\`bash
+\`\`\`cmd
 pip install -r requirements.txt
 \`\`\`
 
@@ -140,8 +144,7 @@ pip install -r requirements.txt
 
 Run each scraper to collect the latest financial news:
 
-\`\`\`bash
-# Run scrapers individually
+\`\`\`cmd
 python Economy.py
 python MoneyControl.py
 python NY-times.py
@@ -151,7 +154,7 @@ python NY-times.py
 
 Combine and clean the collected data:
 
-\`\`\`bash
+\`\`\`cmd
 python combain.py
 \`\`\`
 
@@ -159,7 +162,7 @@ python combain.py
 
 Start the interactive query interface:
 
-\`\`\`bash
+\`\`\`cmd
 python RAG.py
 \`\`\`
 
